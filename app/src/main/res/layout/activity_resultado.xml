@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultadoActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/imgD0"
+        android:layout_width="450dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/principal"
+        />
+
+    <ImageView
+        android:id="@+id/imgD1"
+        android:layout_width="450dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgD0"
+        android:background="#FF7043"
+        />
+
+    <ImageView
+        android:id="@+id/imgD2"
+        android:layout_width="450dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgD1"
+        android:background="#FFAB91"
+        />
+
+        <ImageView
+        android:id="@+id/imgB0"
+        android:layout_width="450dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#BF360C "
+        />
+
+            <ImageView
+        android:id="@+id/imgB1"
+        android:layout_width="450dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgB0"
+        android:background="#FF7043"
+        />
+
+                <ImageView
+        android:id="@+id/imgB2"
+        android:layout_width="450dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgB1"
+        android:background="#FFAB91"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+            android:layout_height="480dp"
+            android:background="@drawable/edittext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+        android:id="@+id/textNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Hola NOMBRE"
+        android:textSize="30sp"
+        android:textColor="#BF360C"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTemperatura"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Calculadora"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNombre"
+        android:background="@drawable/editbtn"
+        android:textColor="@color/white">
+
+    </androidx.appcompat.widget.AppCompatButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
