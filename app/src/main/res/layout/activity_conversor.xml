@@ -77,7 +77,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-
         <TextView
         android:id="@+id/textIndicacion"
         android:layout_width="200dp"
@@ -86,7 +85,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Selecciona la Temperatura a Convertir"
+        android:text="Selecciona la Temperatura"
         android:gravity="center"
         android:textSize="20sp"
         android:textColor="#BF360C"/>
