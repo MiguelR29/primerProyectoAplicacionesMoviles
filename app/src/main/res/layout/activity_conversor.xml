@@ -204,7 +204,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="100°"
+                android:text="-100 °"
                 android:textColor="@color/white"
                 android:textSize="35sp"
                 android:textAlignment="center"
@@ -212,7 +212,11 @@
                 <com.google.android.material.slider.Slider
                 android:id="@+id/sliderTemperature"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="-100"
+                android:valueTo="100"
+                    />
 
         </LinearLayout>
         </androidx.cardview.widget.CardView>
