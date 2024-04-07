@@ -15,9 +15,16 @@ class ResultadoActivity : AppCompatActivity() {
         textoNombre.text = "Hola $texto"
 
         val btnTemperatura = findViewById<AppCompatButton>(R.id.btnTemperatura)
+        val btnConversion = findViewById<AppCompatButton>(R.id.btnConversion)
+
 
         btnTemperatura.setOnClickListener {
             val intento = Intent(this, ConversorActivity::class.java)
+            startActivity(intento)
+        }
+
+        btnConversion.setOnClickListener {
+            val intento = Intent(this, ConversionActivity::class.java)
             startActivity(intento)
         }
     }
