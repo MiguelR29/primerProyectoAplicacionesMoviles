@@ -73,86 +73,100 @@
         android:layout_width="350dp"
         android:layout_height="480dp"
         android:background="@drawable/edittext"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_bias="0.498">
 
         <TextView
             android:id="@+id/textIndicacion"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Decimal a Binario"
             android:gravity="center"
+            android:text="Decimal a Binario"
+            android:textColor="#BF360C"
             android:textSize="20sp"
-            android:textColor="#BF360C"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/conversion0"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/edittext2"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textSize="20sp"
-            android:textColor="#FBE9E7"
+            android:digits="0123456789"
             android:gravity="center"
             android:inputType="number"
-            android:digits="0123456789"
             android:maxLength="10"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#FBE9E7"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textIndicacion"/>
+            app:layout_constraintTop_toBottomOf="@+id/textIndicacion" />
 
         <ImageButton
             android:id="@+id/btnChange"
             android:layout_width="75dp"
             android:layout_height="50dp"
-            android:src="@drawable/change2"
-            android:background="@drawable/editbtn"
             android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/editbtn"
+            android:src="@drawable/change2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/conversion0"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conversion0" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/conversion1"
             android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="15dp"
+            android:layout_height="80dp"
             android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/edittext2"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textSize="20sp"
-            android:textColor="#FBE9E7"
+            android:digits="0123456789"
+            android:enabled="false"
             android:gravity="center"
             android:inputType="number"
-            android:digits="0123456789"
-            android:maxLength="10"
+            android:maxLength="30"
+            android:maxLines="2"
+            android:textColor="#FBE9E7"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnChange"/>
+            app:layout_constraintTop_toBottomOf="@+id/btnChange" />
+`
+        <ImageButton
+            android:id="@+id/btnCopiar"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/editbtn"
+            android:src="@drawable/copiar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conversion1" />
 
-
+        <!--
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConversion"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:text="Convertir"
             android:layout_marginTop="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/conversion1"
             android:background="@drawable/editbtn"
-            android:textColor="@color/white">
-        </androidx.appcompat.widget.AppCompatButton>
+            android:text="Convertir"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCopiar"></androidx.appcompat.widget.AppCompatButton>
+            -->
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
