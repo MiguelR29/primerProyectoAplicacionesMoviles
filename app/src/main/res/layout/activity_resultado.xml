@@ -114,6 +114,20 @@
         android:background="@drawable/editbtn"
         android:textColor="@color/white">
     </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIMC"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="IMC"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnConversion"
+            android:background="@drawable/editbtn"
+            android:textColor="@color/white">
+            </androidx.appcompat.widget.AppCompatButton>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
