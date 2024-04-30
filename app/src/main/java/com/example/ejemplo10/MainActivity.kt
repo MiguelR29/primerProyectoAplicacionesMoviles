@@ -4,38 +4,54 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
+import com.example.ejemplo10.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val botonLogin = findViewById<AppCompatButton>(R.id.btnInicio)
-        val botonBorrar = findViewById<AppCompatButton>(R.id.btnBorrar)
-        val botonRegister = findViewById<AppCompatButton>(R.id.btnRegistro)
-        val usuario = findViewById<AppCompatEditText>(R.id.editText)
-        val contra = findViewById<AppCompatEditText>(R.id.editText2)
+        //setContentView(R.layout.activity_main)
 
-        botonLogin.setOnClickListener {
-            val textUsuario = usuario.text.toString()
-            val textContra = contra.text.toString()
-            if (textUsuario.isNotEmpty() && textContra.isNotEmpty()) {
-                val intento = Intent(this, ResultadoActivity::class.java)
-                intento.putExtra("EXTRA_NOMBRE", textUsuario)
-                intento.putExtra("EXTRA_CONTRA", textContra)
-                startActivity(intento)
-                }
-        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        botonBorrar.setOnClickListener {
-            usuario.setText("")
-            contra.setText("")
-        }
+        firebaseAuth = FirebaseAuth.getInstance()
 
-        botonRegister.setOnClickListener {
+        binding.btnRegistro.setOnClickListener {
             val intento = Intent(this, RegisterActivity::class.java)
             startActivity(intento)
+        }
+
+        val correo_input = findViewById<AppCompatEditText>(R.id.editText)
+        val contra_input = findViewById<AppCompatEditText>(R.id.editText2)
+
+        binding.btnBorrar.setOnClickListener {
+            correo_input.setText("")
+            contra_input.setText("")
+        }
+
+        binding.btnInicio.setOnClickListener {
+            val correo = binding.editText.text.toString()
+            val contra = binding.editText2.text.toString()
+
+            if(correo.isNotEmpty() && contra.isNotEmpty()){
+                firebaseAuth.signInWithEmailAndPassword(correo, contra).addOnCompleteListener {
+                    if(it.isSuccessful){
+                        val intento = Intent(this, ResultadoActivity::class.java)
+                        startActivity(intento)
+                    }else{
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }else{
+                Toast.makeText(this, "Existen campos vacios", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
