@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                         val intento = Intent(this, ResultadoActivity::class.java)
                         startActivity(intento)
                     }else{
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Usuario/Contraseña no validos", Toast.LENGTH_SHORT).show()
                     }
                 }
             }else{

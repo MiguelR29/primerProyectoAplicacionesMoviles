@@ -100,12 +100,6 @@ class ConversionActivity : AppCompatActivity() {
         if (tipo) {
             convertir.keyListener = DigitsKeyListener.getInstance("01")
 
-            //val convertirText = convertir.text.toString()
-            //val conversionText = conversion.text.toString()
-
-            //convertir.setText(conversionText)
-            //conversion.setText(convertirText)
-
             convertir.setText("")
             conversion.setText("")
 
@@ -113,12 +107,6 @@ class ConversionActivity : AppCompatActivity() {
             change = false
         } else {
             convertir.keyListener = DigitsKeyListener.getInstance("0123456789")
-
-            //val convertirText = convertir.text.toString()
-            //val conversionText = conversion.text.toString()
-
-            //convertir.setText(conversionText)
-            //conversion.setText(convertirText)
 
             convertir.setText("")
             conversion.setText("")

@@ -144,6 +144,7 @@
                     android:textSize="20sp"
                     android:textColor="#FBE9E7"
                     android:gravity="center"
+                    android:password="true"
                     app:layout_constraintBottom_toTopOf="@id/labelNombre3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />

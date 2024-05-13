@@ -26,6 +26,11 @@ class RegisterActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.btnVolver.setOnClickListener {
+            val intento = Intent(this, MainActivity::class.java)
+            startActivity(intento)
+        }
+
         binding.btnRegistro.setOnClickListener {
             val correo = binding.editText1.text.toString()
             val contra = binding.editText2.text.toString()
@@ -49,10 +54,7 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        binding.btnVolver.setOnClickListener {
-            val intento = Intent(this, MainActivity::class.java)
-            startActivity(intento)
-        }
+
 
     /*
     botonVolver.setOnClickListener {
